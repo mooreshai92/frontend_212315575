@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<title>DigiBank</title>
+</h:head>
+<h:body>
+	<h2>Money Transfer</h2>
+	<h:form>
+		<h:panelGrid columns="2" cellpadding="5">
+			<h:outputLabel value="Name" />
+			<h:inputText value="#{digibankcontroller.transaction.name}"></h:inputText>
+			<h:outputLabel value="Source Passport" />
+			<h:inputText value="#{digibankcontroller.transaction.sourcePassport}"></h:inputText>
+			<h:outputLabel value="Destination Passport" />
+			<h:inputText value="#{digibankcontroller.transaction.destinationPassport}"></h:inputText>
+			<h:outputLabel value="Destination Bank" />
+			<h:inputText value="#{digibankcontroller.transaction.destinationBank}"></h:inputText>
+			<h:outputLabel value="Destination Country" />
+			<h:inputText value="#{digibankcontroller.transaction.destinationCountry}"></h:inputText>
+			<h:outputLabel value="Account Number" />
+			<h:inputText value="#{digibankcontroller.transaction.accountNumber}"></h:inputText>
+			<h:outputLabel value="Amount" />
+			<h:inputText value="#{digibankcontroller.transaction.amount}"></h:inputText>
+			<h:outputLabel value="Transaction Code" />
+			<h:inputText value="#{digibankcontroller.transaction.transactionCode}"></h:inputText>
+			<h:outputLabel></h:outputLabel>
+			
+		</h:panelGrid>
+		<h:commandButton value="Submite" action="#{digibankcontroller.addtransaction}"></h:commandButton>
+	</h:form>
+	
+	
+	
+</h:body>
+</html>
